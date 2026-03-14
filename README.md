@@ -21,7 +21,7 @@ Simple jumping plugin for Neovim.
         }
         jumper.setup(config)
 
-        -- Key bidnings
+        -- Key bindings
         vim.keymap.set({ "n", "v" }, "<leader>j", function()
             jumper.interactive_search()
         end)
