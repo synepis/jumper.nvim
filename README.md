@@ -1,6 +1,6 @@
 # jumper.nvim
 
-Simple jumping plugin for Neovim, inspired by AceJump.
+Simple jumping plugin for Neovim, inspired by [AceJump](https://github.com/acejump/AceJump).
 
 ![img](assets/jumper.gif)
 
