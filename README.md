@@ -2,7 +2,9 @@
 
 Simple jumping plugin for Neovim. 
 
-Basic configuration
+![img](assets/jumper.gif)
+
+**Configuration**
 ```lua
 {
     "synepis/jumper.nvim",
