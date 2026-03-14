@@ -18,14 +18,6 @@ local TERM_CODES = {
 	CTRL_BS = vim.api.nvim_replace_termcodes("<C-BS>", true, true, true),
 }
 
-local function log(msg)
-	local f = io.open("/tmp/jumper.log", "a")
-	if f then
-		f:write("[" .. os.date("%H:%M:%S") .. "]: " .. vim.inspect(msg) .. "\n")
-		f:close()
-	end
-end
-
 local function find_matches_in_win(win_id, search_str)
 	local matches = {}
 	local bufnr = vim.api.nvim_win_get_buf(win_id)
