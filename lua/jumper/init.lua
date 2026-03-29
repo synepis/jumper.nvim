@@ -123,8 +123,11 @@ local function label_input(matches, starting_char)
 
 		if #matches == 1 then
 			local m = matches[1]
-			vim.api.nvim_set_current_win(m.win_id)
-			vim.api.nvim_win_set_cursor(m.win_id, { m.row, m.col_start - 1 })
+			local win_ok = vim.api.nvim_win_is_valid(m.win_id)
+			local cursor_ok = vim.api.nvim_win_set_cursor(m.win_id, { m.row, m.col_start - 1 })
+			if win_ok and cursor_ok then
+				vim.api.nvim_set_current_win(m.win_id)
+			end
 			break
 		elseif #matches == 0 then
 			break
